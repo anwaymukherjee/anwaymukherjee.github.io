@@ -6,7 +6,45 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
+	
+        .collapsible {
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        }
+
+        .active, .collapsible:hover {
+        background-color: #777;
+        }
+
+        .collapsible:after {
+            content: '\002B';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+        
+        
+        .content1 {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        }
+
 		.content {
 			max-width: 1200px;
 			margin: auto;
@@ -44,7 +82,7 @@
 		
 		#rcorners{
 			border-radius: 25px;
-			background: #C5B15C;
+			background: #F2F3F4;
 			padding: 20px;
 			width: 600px;
 			height: 150px;
@@ -110,19 +148,50 @@
 	</style>
 
 	<body>
+	
+        
+		
+		
 		<div class="content">
+		
+		<button type="button" class="collapsible">Anway Mukherjee</button>
+        <div class="content1">
+            <nav>
+				<ul style="float: right;"> 
+					<li data-target="section.home.s-h" ><a href="#"><i class="fa fa-user-circle-o"></i> Home</a></li>
+					<li data-target="section.publications.s-h"><a href="#"><i class="fa fa-bar-chart"></i> Publications</a></li>
+					<li data-target="section.teaching.s-h"><a href="#"><i class="fa fa-newspaper-o"></i> Teaching</a></li>
+				</ul>
+			</nav>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+		
+		
 			
-			<h2 style="float: left; width: 40%;"><a style="text-decoration: none;color: darkgreen;" href="url">Anway Mukherjee</a></h2>
+			<!--<h2 style="float: left; width: 100%;"><a style="text-decoration: none;color: darkgreen;" href="url">Anway Mukherjee</a></h2>
 			<h2 style="float: right; width: 20%; text-align:center;"><img src="teach.png" alt="logo-house" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Teaching</a></h2>
 			<h2 style="float: right; width: 20%; text-align:center;"><img src="chart.png" alt="logo" style="border-radius:0px;width:35px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Publications</a></h2>
-			<h2 style="float: right; width: 20%; text-align:center;"><img src="house.png" alt="logo" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Home</a></h2>
+			<h2 style="float: right; width: 20%; text-align:center;"><img src="house.png" alt="logo" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Home</a></h2>-->
 			<br>
-			<img src="am.jpeg" alt="Anway Mukherjee" style="float:left;width:220px;height:220px;">			
 			<br>
-			<p>	
+			<img src="am.jpeg" alt="Anway Mukherjee" style="float:left;width:220px;height:220px;">
 			<br>
-			<br>	
-			<br>	
 			I am a senior embedded software engineer at <a style="text-decoration: none; color: darkgreen;" href="https://www.lucidmotors.com/" target="_blank">Lucid Motors</a> based in Newark, CA. I am working with the ADAS team to 
 			implement an over-the-air secure update framework through trusted execution environments (TEEs) in their flagship EV, 
 			Lucid Air, scheduled for release in February 2021.
