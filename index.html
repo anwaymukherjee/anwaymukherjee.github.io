@@ -8,7 +8,7 @@
 
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<style>
-	
+
         .collapsible {
         background-color: #555;
         color: white;
@@ -44,7 +44,78 @@
         overflow: hidden;
         background-color: #f1f1f1;
         }
+        
+        
+        .pubs {
+        <!--background-color: #555;-->
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        }
 
+        .teach {
+        <!--background-color: #555;-->
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        }
+        
+        .activepubs, .pubs:hover {
+           <!-- background-color: #F7E8F3;-->
+        }
+
+        .pubs:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .activepubs:after {
+            <!--content: "\2212";-->
+        }
+        
+        
+        .activeteach, .teach:hover {
+           <!-- background-color: #F7E8F3;-->
+        }
+
+        .teach:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .activeteach:after {
+            <!--content: "\2212";-->
+        }
+        
+        
+        
+        
+        
+        .content2 {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #F2F3F4;
+        }
+        
+        
+        
 		.content {
             
 			max-width: 1200px;
@@ -157,12 +228,16 @@
 		
 		<button type="button" class="collapsible">Anway Mukherjee <i class="fa fa-bars" style="float: right;" aria-hidden="true"> Menu</i></button>
         <div class="content1">
-            <nav>
-				<ul style="float: right; list-style-type: none;font-size: 20px;"> 
+            <nav style="float: right; list-style-type: none;font-size: 20px;">
+            <!--<a style="text-decoration: none;"><i class="fa fa-home"></i> Home</a>-->
+            <a class= "pubs" style="text-decoration: none;"><i class="fa fa-bar-chart"></i> Publications</a>
+            <a class= "teach" style="text-decoration: none;"><i class="fa fa-newspaper-o"></i> Teaching</a>
+			<!--	<ul style="float: right; list-style-type: none;font-size: 20px;"> 
 					<li data-target="section.home.s-h" ><a style="text-decoration: none;" href="#"><i class="fa fa-home"></i> Home</a></li>
-					<li data-target="section.publications.s-h"><a style="text-decoration: none;" href="#"><i class="fa fa-bar-chart"></i> Publications</a></li>
+					<li  class= "pubs" data-target="section.publications.s-h"><a style="text-decoration: none;" href="#"><i class="fa fa-bar-chart"></i> Publications</a></li>
 					<li data-target="section.teaching.s-h"><a style="text-decoration: none;" href="#"><i class="fa fa-newspaper-o"></i> Teaching</a></li>
 				</ul>
+			-->	
 			</nav>
         </div>
 
@@ -174,6 +249,28 @@
                 coll[i].addEventListener("click", function() {
                     this.classList.toggle("active");
                     var content = this.nextElementSibling;
+                    var content1 = papers;
+                    var content2 = teach;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        content1.style.display = "none";
+                        content2.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+        
+        <script>
+            var coll = document.getElementsByClassName("pubs");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("activepubs");
+                    var content = papers;
                     if (content.style.display === "block") {
                         content.style.display = "none";
                     } else {
@@ -182,8 +279,57 @@
                 });
             }
         </script>
+			
+			
+            <script>
+            var coll = document.getElementsByClassName("teach");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("activeteach");
+                    var content = teach;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+            
+            </script>
 		
+				
+            <div class="content2" id="papers">
+                <p>
+                    <ul style="font-size: 20px;list-style-type: none;"> 
+                        <li style="list-style-type: none;">
+                            <a style="text-decoration: none;color: darkgreen;" href="#"><i class="fa fa-paperclip"></i>
+                                Optimized trusted execution for hard real-time applications on COTS processors
+                            </a>
+                            <br>
+                            A Mukherjee, T Mishra, T Chantem, N Fisher, R Gerdes<br>
+                            Proceedings of the 27th International Conference on Real-Time Networks and Systems (RTNS), 2019 
+                        </li>
+                        <br>
+                        <li>
+                            <a style="text-decoration: none;color: darkgreen;" href="#"><i class="fa fa-paperclip"></i>
+                                Energy management of applications with varying resource usage on smartphones
+                            </a>
+                            <br>
+                            A Mukherjee, T Chantem<br>
+                            IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)/ESWEEK, 2018
+                        </li>
+					</ul>
+                </p>
+            </div>
 		
+            <div class="content2" id="teach">
+                <p>
+                    Teaching teaching teaching.
+                </p>
+            </div>
+			
 			
 			<!--<h2 style="float: left; width: 100%;"><a style="text-decoration: none;color: darkgreen;" href="url">Anway Mukherjee</a></h2>
 			<h2 style="float: right; width: 20%; text-align:center;"><img src="teach.png" alt="logo-house" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Teaching</a></h2>
@@ -208,7 +354,10 @@
 
 			
 			<p>
-			<a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="url" target="_blank">Resume</a>  <a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://scholar.google.com/citations?hl=en&user=r3EB-mAAAAAJ" target="_blank">Google Scholar</a> <a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://github.com/anwaymukherjee" target="_blank">GitHub</a> <a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://www.linkedin.com/in/anway-mukherjee/" target="_blank">LinkedIn</a>
+			<a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="url" target="_blank">Resume</a>  
+			<a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://scholar.google.com/citations?hl=en&user=r3EB-mAAAAAJ" target="_blank">Google Scholar</a>  
+			<a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://github.com/anwaymukherjee" target="_blank">GitHub</a> 
+			<a style="text-decoration: none;color: darkgreen;" id="rcornersLink" href="https://www.linkedin.com/in/anway-mukherjee/" target="_blank">LinkedIn</a>
 			</p>
 
 			
@@ -247,8 +396,11 @@
 			opportunistically reclaim the usable utilization of the system.
 			[<a style="text-decoration: none;color: darkgreen;" href="ICESS_2020_DAG.pdf" target="_blank">ICESS '20</a>]
 			</p>
-			
+		
 		</div>
+		
+        
+		
 		
 			<hr style="width:100%;color:red;background-color:darkred;height:10px;">	
 			<div style="float: left; width: 100%;" id="rcornersFooter">			
