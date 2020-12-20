@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Anway Mukherjee</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	<style>
+
+        .collapsible {
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        }
+
+        .active, .collapsible:hover {
+        background-color: #777;
+        }
+
+        .collapsible:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            <!--content: "\2212";-->
+        }
+        
+        
+        .content1 {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        }
+        
+        
+        .pubs {
+        <!--background-color: #555;-->
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        }
+
+        .research {
+        <!--background-color: #555;-->
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        }
+        
+        .teach {
+        <!--background-color: #555;-->
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        }
+        
+        
+        .project1 {
+        <!--background-color: #555;-->
+        
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 15%;
+        height: 140px;
+        border-radius: 30%;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        
+        }
+
+        
+        .project2 {
+        <!--background-color: #555;-->
+        
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 15%;
+        height: 140px;
+        border-radius: 30%;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+
+        }
+        
+        
+        .project3 {
+        <!--background-color: #555;-->
+        
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 15%;
+        height: 140px;
+        border-radius: 30%;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+
+        }
+        
+        
+        .activepubs, .pubs:hover {
+           background-color: #D7DBDD;
+        }
+
+        .pubs:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .activepubs:after {
+            <!--content: "\2212";-->
+        }
+        
+        
+        .activeteach, .teach:hover {
+           background-color: #D7DBDD;
+        }
+
+        .teach:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+
+        .activeteach:after {
+            <!--content: "\2212";-->
+        }
+        
+        
+        .research:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+        .research:hover{
+           background-color: #D7DBDD;
+        }
+        
+        .activeproject1, .project1:hover {
+           background-color: #D7DBDD;
+        }
+        
+
+
+        .activeproject2, .project2:hover {
+           background-color: #D7DBDD;
+           
+        }
+ 
+        .activeproject3, .project3:hover {
+           background-color: #D7DBDD;
+        }
+
+        
+        .project1:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .project2:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        .project3:after {
+            <!--content: '\002B';-->
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+        
+         .activeproject1:after {
+            <!--content: "\2212";-->
+            color: black;
+        }
+ 
+         .activeproject2:after {
+            <!--content: "\2212";-->
+            color: white;
+        }
+
+         .activeproject3:after {
+            <!--content: "\2212";-->
+            color: white;
+        }
+
+        
+        .content2 {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #F2F3F4;
+        }
+
+        .content3 {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #F2F3F4;
+        }
+        
+        
+        .content {
+            
+			max-width: 1200px;
+			margin: auto;
+            font-family:Sans-serif;
+		}
+		
+		.img {
+			border-radius: 50%; <!--25px;-->
+			border: 1px solid #73AD21; 
+			width: 250px;
+			height: 250px;
+			margin-right:50px; 
+		}
+		
+		#image2 {
+			
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 30%;
+            height: 300px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 20px;
+		}
+		
+		#image1 {
+			border-radius: 15px;
+			border: 0px solid #73AD21; 
+			width: 20%; <!--250px;-->
+			<!--height: 150px;-->
+			margin-right:50px; 
+		}
+		
+		h2:hover {
+			border-radius: 2px;
+			background: #F7E8F3;
+		}
+		
+		#rcornersLink{
+			border-radius: 5px;
+			<!--background: #F7E8F3;-->
+			padding: 5px;
+			width: 10px;
+			height: 10px;
+			margin: auto;
+		}
+
+		#rcornersLink:hover{
+			border-radius: 5px;
+			background: #F7E8F3;
+			padding: 5px;
+			width: 10px;
+			height: 10px;
+			margin: auto;
+		}
+		
+		
+		#rcorners{
+			border-radius: 25px;
+			background: #F2F3F4;
+			padding: 20px;
+			width: 600px;
+			height: 150px;
+			margin: auto;
+			margin-right:5px; 
+			margin-left:5px;
+			margin-bottom:5px;
+		}
+		
+		#rcornersCenter{
+			border-radius: 25px;
+			background: #C5B15C;
+			padding: 20px;
+			width: 600px;
+			height: 500px;
+			margin: auto;
+			margin-right:2px; 
+			margin-left:8px;
+		}
+		
+		#rcornersFooter{
+			border-radius: 5px;
+			background: #D5DBDB;
+			width: 90%;
+			height: 80px;
+			margin: auto;
+			margin-right:0px; 
+			margin-left:0px;
+			margin-bottom:0px;
+			margin-top:0px;
+		}
+		
+		#rcornersContactL{
+			width: 45%;
+			height: 50px;
+			margin: auto;
+			margin-right:0px; 
+			margin-left:320px;
+			margin-bottom:0px;
+			margin-top:0px;
+		}
+		
+		#rcornersContactR{
+			padding: 20px;
+			width: 45%;
+			height: 50px;
+			margin: auto;
+			margin-right:50px; 
+			margin-left:0px;
+			margin-bottom:0px;
+			margin-top:0px;
+		}
+		
+		hr { 
+		  <!--display: block;-->
+		  margin-top: 30px;
+		  margin-bottom: 5px;
+		  margin-left: auto;
+		  margin-right: auto;
+		  border-style: inset;
+		} 		
+		
+	</style>
+
+	<body>
+	
+        
+		
+		
+		<div class="content">
+		
+		<button type="button" class="collapsible">Anway Mukherjee <i class="fa fa-bars" style="float: right;" aria-hidden="true"> Menu</i></button>
+        <div class="content1">
+            <nav style="float: right; list-style-type: none;font-size: 16px;">
+            <!--<a style="text-decoration: none;"><i class="fa fa-home"></i> Home</a>-->
+            <a class= "research" style="text-decoration: none;color:black;" href="#image"><i class="fa fa-bar-chart"></i> Research</a>
+            <a class= "pubs" style="text-decoration: none;"><i class="fa fa-bar-chart"></i> Publications</a>
+            <a class= "teach" style="text-decoration: none;"><i class="fa fa-newspaper-o"></i> Teaching</a>
+            
+            <!--	<ul style="float: right; list-style-type: none;font-size: 20px;"> 
+					<li data-target="section.home.s-h" ><a style="text-decoration: none;" href="#"><i class="fa fa-home"></i> Home</a></li>
+					<li  class= "pubs" data-target="section.publications.s-h"><a style="text-decoration: none;" href="#"><i class="fa fa-bar-chart"></i> Publications</a></li>
+					<li data-target="section.teaching.s-h"><a style="text-decoration: none;" href="#"><i class="fa fa-newspaper-o"></i> Teaching</a></li>
+				</ul>
+			-->	
+			</nav>
+        </div>
+
+        
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    var content1 = papers;
+                    var content2 = teach;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        content1.style.display = "none";
+                        content2.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+        
+        <script>
+            var coll = document.getElementsByClassName("pubs");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("activepubs");
+                    var content = papers;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        </script>
+			
+			
+            <script>
+            var coll = document.getElementsByClassName("teach");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("activeteach");
+                    var content = teach;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+            
+            </script>
+            
+            
+            
+		
+				
+            <div class="content2" id="papers">
+                <p>
+                    <ul style="font-size: 16px;list-style-type: none;"> 
+                        <li style="list-style-type: none;">
+                            <a style="text-decoration: none;" href="#"><i class="fa fa-paperclip"></i>
+                                Optimized trusted execution for hard real-time applications on COTS processors
+                            </a>
+                            <br>
+                            A Mukherjee, T Mishra, T Chantem, N Fisher, R Gerdes<br>
+                            Proceedings of the 27th International Conference on Real-Time Networks and Systems (RTNS), 2019 
+                        </li>
+                        <br>
+                        <li>
+                            <a style="text-decoration: none;" href="#"><i class="fa fa-paperclip"></i>
+                                Energy management of applications with varying resource usage on smartphones
+                            </a>
+                            <br>
+                            A Mukherjee, T Chantem<br>
+                            IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)/ESWEEK, 2018
+                        </li>
+					</ul>
+                </p>
+            </div>
+		
+            <div class="content2" id="teach">
+                <p>
+                    Teaching teaching teaching.
+                </p>
+            </div>
+			
+			
+			<!--<h2 style="float: left; width: 100%;"><a style="text-decoration: none;color: darkgreen;" href="url">Anway Mukherjee</a></h2>
+			<h2 style="float: right; width: 20%; text-align:center;"><img src="teach.png" alt="logo-house" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Teaching</a></h2>
+			<h2 style="float: right; width: 20%; text-align:center;"><img src="chart.png" alt="logo" style="border-radius:0px;width:35px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Publications</a></h2>
+			<h2 style="float: right; width: 20%; text-align:center;"><img src="house.png" alt="logo" style="border-radius:0px;width:25px;height:25px;margin-right:10px;"/><a style="text-decoration: none;color: darkgreen;" href="url">Home</a></h2>-->
+			<br>
+			<br>
+			<img class = "img" src="am.jpeg" alt="Anway Mukherjee" style="float:left;width:220px;height:220px;">
+			<br>
+			I am a senior embedded software engineer at <a style="text-decoration: none;" href="https://www.lucidmotors.com/" target="_blank">Lucid Motors</a> based in Newark, CA. I am working with the ADAS team to 
+			implement an over-the-air secure update framework through trusted execution environments (TEEs) in their flagship EV, 
+			Lucid Air, scheduled for release in February 2021.
+			</p>
+			
+			<p>
+			I received my PhD from <a style="text-decoration: none;" href="https://ncr.vt.edu/discovery/research_center_arlington.html" target="_blank">Virginia Tech</a>, USA in 2019. I also worked for a year under <a style="text-decoration: none;" href="https://ece.vt.edu/people/profile/chantem" target="_blank">Dr. Tam Chantem</a> as a 
+			Postdoctoral Associate at the <a style="text-decoration: none;" href="https://www.rtx.ece.vt.edu/" target="_blank">RT-X Lab</a> in Virginia Tech, Arlington, VA. Before that, I received my Bachelors
+			 degree in Electronics and Communication Engineering from West Bengal University of Technology, India.	
+			My research focused on energy-aware and resource-aware hardware-software co-design of real-time embedded systems, 
+			and embedded software and system security through TEEs.			
+			</p>
+
+			
+			<p>
+			<a style="text-decoration: none;" id="rcornersLink" href="url" target="_blank">Resume</a> |   
+			<a style="text-decoration: none;" id="rcornersLink" href="https://scholar.google.com/citations?hl=en&user=r3EB-mAAAAAJ" target="_blank">Google Scholar</a> | 
+			<a style="text-decoration: none;" id="rcornersLink" href="https://github.com/anwaymukherjee" target="_blank">GitHub</a> | 
+			<a style="text-decoration: none;" id="rcornersLink" href="https://www.linkedin.com/in/anway-mukherjee/" target="_blank">LinkedIn</a>
+			</p>
+
+			
+			<br>
+
+
+			<!--<p style="float: left; width: 95%;" id="rcorners">-->
+			
+			<img class="project1" id="image_s"   src="smartphone.jpg" alt="smartphones" >
+            <div class="content3" id="project1">
+            
+			<p>
+                <img class="project1" id="image_s" style="float: left; width: 15%;"  src="smartphone.jpg" alt="smartphones" >
+                <span style="color: darkred"><b>Energy Management in Smartphones</b></span><br>
+                While simultaneous side-by-side execution of multiple applications in split-screen mode on smartphones improves 
+                quality-of-service (QoS) for end-users, it also results in increased power consumption and reduced battery lifetime. Saving
+                energy when multiple concurrent applications run side-by-side is extremely challenging since applications often utilize the
+                same shared system resources at the same time, and resource needs change over time. We study  and  predict 
+                application  usage  patterns  in  smartphones  (through static/dynamic profiling and ML techniques),
+                and implement novel energy-aware resource management techniques through holistic DVFS frameworks in Android OS.	
+                [<a style="text-decoration: none;" href="ES_Week_2018.pdf" target="_blank">ES Week '18</a>]  [<a style="text-decoration: none;" href="ICESS_2020_Smartphone.pdf" target="_blank">ICESS '20</a>]
+			</p>
+			</div>
+			
+			<img class="project2" id="image_t"  src="tee.jpg" alt="smartphones" >
+            <!--<p style="float: left; width: 95%;" id="rcorners">-->
+			<div class="content3" id="project2">
+			<p>
+                <img class="project2" id="image_t" style="float: left; width: 15%;" src="tee.jpg" alt="smartphones" >
+                <span style="color: darkred"><b>Optimizing Trusted Execution in Real-Time Systems</b></span><br>
+                Trusted execution environments (TEE) provide industry standard security and isolation in IoTs but its implementation 
+                through secure monitor calls (SMC) attribute to large time overhead and weakened temporal predictability, potentially prohibiting 
+                the use of TEE in hard real-time systems. We explore solutions where multiple trusted execution sections are fused together to 
+                amortize TEE execution overhead and improve predictability through minimized I/O traffic and reduced switching between normal mode 
+                and TEE mode of execution. We also present techniques to enforce the correct timing requirement of a task, along with a sufficient test
+                for schedulability in uniprocessors.
+                [<a style="text-decoration: none;" href="RTNS_2019.pdf" target="_blank">RTNS '19</a>]
+			</p>
+			</div>
+			
+			
+            <img class="project3" id="image_d" src="dags.jpg" alt="smartphones" >
+            <div class="content3" id="project3">
+			<p>
+                <img class="project3" id="image_d" style="float: left; width: 15%;" src="dags.jpg" alt="smartphones" >
+                <span style="color: darkred"><b>Resource-Aware Parallel Execution in Real-Time Systems</b></span><br>
+                The federated scheduling framework is a popular multicore scheduling policy for parallel periodic real-time tasks that are 
+                often modeled as directed acyclic graphs (DAGs). However, it often over-estimates the processing requirements of parallel task execution, 
+                resulting in acute resource under-utilization of available processing capacity in an already resource-constrained system. We experiment to 
+                reduce resource under-utilization by proposing a task transformation mechanism where compatible DAG tasks are fused and transformed to 
+                opportunistically reclaim the usable utilization of the system.
+                [<a style="text-decoration: none;" href="ICESS_2020_DAG.pdf" target="_blank">ICESS '20</a>]
+			</p>
+			</div>
+
+			
+			
+            <script>
+                var coll = document.getElementsByClassName("project1");
+                
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    
+                    
+                    coll[i].addEventListener("click", function() {
+                    
+                    var coll2 = document.getElementById("image_t");
+                    var coll3 = document.getElementById("image_d");
+
+                    
+                    this.classList.toggle("activeproject1");
+                    var content = project1;
+                    var content2 = project2;
+                    var content3 = project3;
+                    
+
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        coll2.style.display = "initial";
+                        coll3.style.display = "initial";
+                        
+                    }
+                    else {
+                        content.style.display = "block";
+                        coll2.style.display = "none";
+                        coll3.style.display = "none";
+                        
+                    }
+                    if (content2.style.display === "block") {
+                        
+                        content2.style.display = "none";
+                        
+                    
+                    }
+                    if (content3.style.display === "block") {
+                        content3.style.display = "none";
+                        
+
+                    }
+                      
+                                        
+     
+                    });
+
+                }
+            </script>
+            
+            <script>
+            var coll = document.getElementsByClassName("project2");
+            var i;
+
+
+            
+            for (i = 0; i < coll.length; i++) {
+            
+            
+                coll[i].addEventListener("click", function() {
+                    
+                   
+                    var coll1 = document.getElementById("image_s");
+                    var coll3 = document.getElementById("image_d");
+                    
+                   this.classList.toggle("activeproject2");
+                    var content = project2;
+                    var content1 = project1;
+                    var content3 = project3;
+
+                   
+                    
+                    
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        
+                        coll1.style.display = "initial";
+                        coll3.style.display = "initial";
+                        
+                    } else {
+                        content.style.display = "block";
+                        
+                      
+                        coll1.style.display = "none";
+                        coll3.style.display = "none";
+
+                    }
+                    
+                    if (content1.style.display === "block") {
+                        content1.style.display = "none";
+                        
+                    }
+                    if (content3.style.display === "block") {
+                        content3.style.display = "none";
+                      
+                    }
+                   
+                });
+            }
+            </script>
+            
+            <script>
+            var coll = document.getElementsByClassName("project3");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    
+                    
+                    var coll1 = document.getElementById("image_s");
+                    var coll2 = document.getElementById("image_t");
+                    
+                    this.classList.toggle("activeproject3");
+                    var content = project3;
+                    
+                    var content1 = project1;
+                    var content2 = project2;
+                    
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        
+                        coll1.style.display = "initial";
+                        coll2.style.display = "initial";
+                        
+                    } else {
+                        content.style.display = "block";
+                        coll1.style.display = "none";
+                        coll2.style.display = "none";
+                    }
+                    if (content1.style.display === "block") {
+                        content1.style.display = "none";
+                        
+                    }
+                    if (content2.style.display === "block") {
+                        content2.style.display = "none";
+                        
+                    }
+                    
+                });
+            }
+            </script>
+            
+			
+            
+			
+			
+			
+			
+			<!--<p style="float: left; width: 95%;" id="rcorners">-->
+			
+				
+			
+			
+			
+		
+		</div>
+		
+        
+            
+		
+			<hr style="width:100%;color:red;background-color:darkred;height:10px;">	
+			<div style="float: left; width: 100%;" id="rcornersFooter">			
+                
+                <p style="text-align:center" >
+                <i class="fa fa-phone"></i>   +1-435-881-4828 &nbsp &nbsp       
+                <i class="fa fa-envelope"></i>   anwaym@vt.edu <br>
+                &#169 Anway Mukherjee, 2020<br>
+                <br>
+                </p>
+			
+            </div>
+			
+				
+		
+	</body>
+	
+</html>
